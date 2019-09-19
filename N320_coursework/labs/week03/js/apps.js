@@ -1,7 +1,8 @@
+var t = 0;
 class Ball {
   //obeserver pattern
   constructor() {
-    this.position = { x: 100, y: 100 };
+    this.position = { x: 100, y: 50 };
     this.velocity = { x: 10, y: 0 };
   }
 
@@ -13,7 +14,9 @@ class Ball {
 
     if (this.position.x < 0 || this.position.x > 400) {
       World.ballBeyond(this);
-      World.boxBeyond(this);
+      t = 1;
+    } else {
+      t = 0;
     }
   }
 }
@@ -28,18 +31,23 @@ var World = {
   },
 
   boxBeyond: function(whichBox) {
-    whichBox.size.w + 5;
-    whichBox.size.h + 5;
+    if (t == 1) {
+      whichBox.size.w += 5;
+      whichBox.size.h += 5;
+    }
   }
 };
 
 class Box {
   constructor() {
     this.size = { x: 100, y: 100, w: 10, h: 10 };
+    this.size2 = { x: 250, y: 250 };
   }
 
   grow() {
     rect(this.size.x, this.size.y, this.size.w, this.size.h);
+    rect(this.size2.x, this.size.y, this.size.w, this.size.h);
+    World.boxBeyond(this);
   }
 }
 
