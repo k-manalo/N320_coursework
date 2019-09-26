@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <style>
+    /*elements*/
+    .title {
+      height: 50px;
+      animation: titleBuildIn 2s;
+      animation-fill-mode: both;
+      font-size: 35px;
+      margin-left: 25px;
+      margin-bottom: 10px;
+      color: navy;
+      font-family: sans-serif;
+    }
+    .banner {
+      background-color: navy;
+      width: 970px;
+      height: 100px;
+      animation: bannerBuildIn 2s;
+      animation-fill-mode: both;
+    }
+    .box {
+      background-color: purple;
+      width: 250px;
+      height: 125px;
+      padding: 1px;
+      animation: boxBuildIn 2s;
+      animation-fill-mode: both;
+      margin-top: 50px;
+      margin-left: 50px;
+    }
+    /*title*/
+    .titleOver {
+      animation: titleOverAnim 0.3s;
+      animation-fill-mode: both;
+    }
+
+    .titleOut {
+      opacity: 0;
+      animation: titleOutAnim 0.3s;
+      animation-fill-mode: both;
+    }
+    .titleClick {
+      animation: titleClickAnime 0.5s;
+      animation-fill-mode: both;
+    }
+    /*banner*/
+    .bannerOver {
+      animation: bannerOverAnim 0.3s;
+      animation-fill-mode: both;
+    }
+
+    .bannerOut {
+      animation: bannerOutAnim 0.3s;
+      animation-fill-mode: both;
+    }
+    .bannerClick {
+      animation: bannerClickAnime 0.5s;
+      animation-fill-mode: both;
+    }
+    /*box*/
+    .boxOver {
+      animation: boxOverAnim 0.7s;
+      animation-fill-mode: both;
+    }
+
+    .boxOut {
+      animation: boxOutAnim 0.7s;
+      animation-fill-mode: both;
+    }
+    .boxClick {
+      animation: boxClickAnime 0.5s;
+      animation-fill-mode: both;
+    }
+
+    #placement {
+      display: flex;
+      flex-flow: row wrap;
+    }
+    /*title key*/
+    @keyframes titleBuildIn {
+      from {
+        opacity: 0;
+        transform: scale(3) rotateZ(750deg) rotateX(130deg) rotateY(300deg);
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes titleOverAnim {
+      to {
+        opacity: 1;
+        color: blue;
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes titleOutAnim {
+      from {
+        opacity: 1;
+        transform: scale(1.2);
+        color: blue;
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+        color: navy;
+      }
+    }
+    /*banner key*/
+    @keyframes bannerBuildIn {
+      from {
+        opacity: 0;
+        transform: scale(3) rotateZ(750deg) rotateX(130deg);
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes bannerOverAnim {
+      to {
+        opacity: 1;
+        background-color: blue;
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes bannerOutAnim {
+      from {
+        opacity: 1;
+        transform: scale(1.2);
+        background-color: blue;
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+        background-color: navy;
+      }
+    }
+    /*box key*/
+    @keyframes boxBuildIn {
+      from {
+        opacity: 0;
+        transform: scale(0.2) rotateZ(750deg) rotateX(750deg);
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes boxOverAnim {
+      to {
+        opacity: 1;
+        background-color: palevioletred;
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes boxOutAnim {
+      from {
+        opacity: 1;
+        transform: scale(1.2);
+        background-color: palevioletred;
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+        background-color: purple;
+      }
+    }
+    @keyframes boxClickAnim {
+      from {
+        opacity: 1;
+        background-color: palevioletred;
+        transform: scale(1.2);
+      }
+      to {
+        opacity: 0;
+        background-color: #fff;
+        transform: scale(0.1);
+      }
+    }
+  </style>
+  <body>
+    <div id="placement"></div>
+    <script src="js/animapp.js"></script>
+  </body>
+</html>

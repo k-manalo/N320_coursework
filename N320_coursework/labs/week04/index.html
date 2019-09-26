@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>week 4 (animation lab)</title>
+  </head>
+  <style>
+    .card {
+      background-color: purple;
+      width: 100px;
+      height: 50px;
+      margin: 2px;
+      padding: 1px;
+      animation: cardBuildIn 0.7s;
+      animation-fill-mode: both;
+    }
+
+    .cardOver {
+      animation: cardOverAnim 0.7s;
+      animation-fill-mode: both;
+    }
+
+    .cardOut {
+      animation: cardOutAnim 0.7s;
+      animation-fill-mode: both;
+    }
+
+    #theplace {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    @keyframes cardBuildIn {
+      from {
+        opacity: 0;
+        transform: scale(0.2) rotateZ(130deg) rotateX(130deg);
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes cardOverAnim {
+      to {
+        opacity: 1;
+        background-color: #ff0;
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes cardOutAnim {
+      from {
+        opacity: 1;
+        transform: scale(1.2);
+        background-color: #ffff00;
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+        background-color: purple;
+      }
+    }
+  </style>
+  <body>
+    <div id="theplace"></div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
