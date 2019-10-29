@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "type": "top three"
+  },
+
+  "candy": [
+    {
+      "name": "Kit Kat",
+      "rating": "big good",
+      "chocolate": true,
+      "deliciousness": 70,
+      "types": [
+        "wasabi",
+        "white",
+        "cherry blossom",
+        "dark chocolate",
+        "milk chocolate"
+      ]
+    },
+    {
+      "name": "Almond Joy",
+      "rating": "hot garbage",
+      "chocolate": true,
+      "deliciousness": 2
+    },
+    {
+      "name": "Peach Rings",
+      "rating": "good",
+      "chocolate": false,
+      "deliciousness": 75
+    }
+  ]
+}

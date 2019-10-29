@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "type": "best"
+  },
+  "movie": [
+    {
+      "name": "sharknado",
+      "rating": "big good",
+      "gnarly?": true,
+      "Goodness Barometer Reading": 700
+    },
+    {
+      "name": "Pokemon",
+      "rating": "good",
+      "gnarly?": true,
+      "Goodness Barometer Reading": 300,
+      "types": ["movie", "TV show", "manga", "card game"]
+    },
+    {
+      "name": "Infinity War",
+      "rating": "lame",
+      "gnarly?": false,
+      "Goodness Barometer Reading": 65
+    }
+  ]
+}
