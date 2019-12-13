@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MECH BUILDER 3K ULTRA</title>
+  </head>
+  <style>
+    body {
+      width: 1200px;
+      height: 590px;
+      display: flex;
+      background-image: url(images/smoke.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .cardContainer {
+      position: absolute;
+      margin-left: -85px;
+    }
+
+    /*PARTS*/
+    .frame {
+      opacity: 50%;
+      border-style: solid;
+      border-width: 2px;
+      border-color: white;
+      width: 150px;
+      height: 90px;
+      padding: 3px;
+      background-image: url(../images/machTex.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-size: 13px;
+      text-shadow: 2px px black;
+      background-color: black;
+      color: white;
+      display: flex;
+      margin-left: 100px;
+    }
+    .head {
+      opacity: 0.5;
+      border-style: solid;
+      border-width: 2px;
+      border-color: white;
+      width: 150px;
+      height: 90px;
+      padding: 3px;
+      background-image: url(../images/cardTexture.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-size: 13px;
+      text-shadow: 2px 2px black;
+      opacity: 0.5;
+      filter: alpha(opacity=50);
+      color: white;
+      display: flex;
+      margin-left: 100px;
+    }
+    .arm {
+      opacity: 50%;
+      border-style: solid;
+      border-width: 2px;
+      border-color: white;
+      width: 150px;
+      height: 90px;
+      padding: 3px;
+      background-image: url(../images/gun.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-size: 13px;
+      text-shadow: 2px 2px black;
+      background-color: black;
+      color: white;
+      display: flex;
+      margin-left: 100px;
+    }
+    .leg {
+      opacity: 50%;
+      border-style: solid;
+      border-width: 2px;
+      border-color: white;
+      width: 150px;
+      height: 90px;
+      padding: 3px;
+      background-image: url(../images/legTex.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-size: 13px;
+      text-shadow: 2px 2px black;
+      background-color: black;
+      color: white;
+      display: flex;
+      margin-left: 100px;
+    }
+    /*ARROW CONTAINERS*/
+    .frameArrows {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 12px;
+    }
+    .headArrows {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 12px;
+    }
+    .armArrows {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 12px;
+    }
+    .legArrows {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 12px;
+    }
+    /*INDIVIDUAL ARROWS*/
+    .arrow {
+      border-style: solid;
+      border-width: 2px;
+
+      border-color: white;
+      cursor: pointer;
+      background: rgb(10, 145, 93);
+      color: #fff;
+      width: 15px;
+      height: 15px;
+      padding: 5px;
+
+      margin: 3px;
+    }
+    .back {
+      border-style: solid;
+      border-width: 2px;
+      border-color: white;
+      cursor: pointer;
+      background: rgb(10, 145, 93);
+      color: #fff;
+      width: 15px;
+      height: 15px;
+      padding: 5px;
+
+      margin: 3px;
+      margin-left: 100px;
+    }
+    .harrow {
+      border-style: solid;
+      border-width: 2px;
+      border-color: white;
+      cursor: pointer;
+      background: rgb(10, 145, 93);
+      color: #fff;
+      width: 15px;
+      height: 15px;
+      padding: 5px;
+
+      margin: 3px;
+    }
+    .hback {
+      border-style: solid;
+      border-width: 2px;
+      border-color: white;
+      cursor: pointer;
+      background: rgb(10, 145, 93);
+      color: #fff;
+      width: 15px;
+      height: 15px;
+      padding: 5px;
+
+      margin: 3px;
+      margin-left: 100px;
+    }
+    .aarrow {
+      border-style: solid;
+      border-width: 2px;
+      border-color: white;
+      cursor: pointer;
+      background: rgb(10, 145, 93);
+      color: #fff;
+      width: 15px;
+      height: 15px;
+      padding: 5px;
+
+      margin: 3px;
+    }
+    .aback {
+      border-style: solid;
+      border-width: 2px;
+      border-color: white;
+      cursor: pointer;
+      background: rgb(10, 145, 93);
+      color: #fff;
+      width: 15px;
+      height: 15px;
+      padding: 5px;
+
+      margin: 3px;
+      margin-left: 100px;
+    }
+    .larrow {
+      border-style: solid;
+      border-width: 2px;
+      border-color: white;
+      cursor: pointer;
+      background: rgb(10, 145, 93);
+      color: #fff;
+      width: 15px;
+      height: 15px;
+      padding: 5px;
+
+      margin: 3px;
+      margin-left: 100px;
+    }
+    .lback {
+      border-style: solid;
+      border-width: 2px;
+      border-color: white;
+      cursor: pointer;
+      background: rgb(10, 145, 93);
+      color: #fff;
+      width: 15px;
+      height: 15px;
+      padding: 5px;
+
+      margin: 3px;
+      margin-left: 100px;
+    }
+    /*BUILD CONTAINERS*/
+    #update {
+      font-size: 25px;
+      position: absolute;
+      margin-left: 475px;
+      margin-top: -230px;
+      color: black;
+      cursor: pointer;
+      width: 100px;
+      height: 30px;
+      background-color: yellow;
+      text-align: center;
+      border: 2px solid black;
+    }
+    #scrap {
+      font-size: 25px;
+      position: absolute;
+      margin-left: 475px;
+      margin-top: -180px;
+      color: black;
+      cursor: pointer;
+      width: 100px;
+      height: 30px;
+      background-color: yellow;
+      text-align: center;
+      border: 2px solid black;
+    }
+    .partsContainer {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      margin-left: 300px;
+      margin-top: -250px;
+    }
+    #weightContainer {
+      font-size: 25px;
+      text-align: center;
+      color: black;
+      cursor: pointer;
+      width: 100px;
+      height: 40px;
+      background-color: black;
+      background-image: url(../images/screen.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 2px solid white;
+    }
+    #speedContainer {
+      font-size: 25px;
+      text-align: center;
+      color: black;
+      cursor: pointer;
+      width: 100px;
+      height: 40px;
+      background-color: black;
+      background-image: url(../images/screen.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 2px solid white;
+    }
+    #aiContainer {
+      font-size: 25px;
+      text-align: center;
+      color: black;
+      cursor: pointer;
+      width: 100px;
+      height: 40px;
+      background-color: black;
+      background-image: url(../images/screen.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 2px solid white;
+    }
+    #shieldContainer {
+      font-size: 25px;
+      text-align: center;
+      color: black;
+      cursor: pointer;
+      width: 100px;
+      height: 40px;
+      background-color: black;
+      background-image: url(../images/screen.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 2px solid white;
+    }
+    #rpmContainer {
+      font-size: 20px;
+      text-align: center;
+      color: black;
+      cursor: pointer;
+      width: 100px;
+      height: 40px;
+      background-color: black;
+      background-image: url(../images/screen.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 2px solid white;
+    }
+    .mechContainer {
+      margin-left: 275px;
+      position: absolute;
+      width: 400px;
+      height: 300px;
+      margin-top: -587px;
+      background-image: url(../images/hanger.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: white;
+      border: 2px solid white;
+    }
+
+    #moreInfo {
+      position: absolute;
+      float: right;
+      color: white;
+      border: 2px solid white;
+      margin-left: 700px;
+      background-color: black;
+      height: 550px;
+      width: 350px;
+    }
+    #infoPic {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+    /*ARROW ANIMATIONS*/
+    /*active*/
+    .fcardActive {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    .hcardActive {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    .acardActive {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    .lcardActive {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    /*out*/
+    .fcardOut {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      transform: rotate(18deg);
+      opacity: 0;
+    }
+    .hcardOut {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      transform: rotate(18deg);
+      opacity: 0;
+    }
+    .acardOut {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      transform: rotate(18deg);
+      opacity: 0;
+    }
+    .lcardOut {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      transform: rotate(18deg);
+      opacity: 0;
+    }
+
+    /*info divs*/
+    .frameInfo {
+      text-align: center;
+      margin-top: 3px;
+      padding: 5px;
+      color: white;
+      border: 2px solid white;
+      height: 15px;
+      width: 80px;
+      background: rgb(10, 145, 93);
+      cursor: pointer;
+    }
+    .headInfo {
+      text-align: center;
+      margin-top: 3px;
+      padding: 5px;
+      color: white;
+      border: 2px solid white;
+      height: 15px;
+      width: 80px;
+      background: rgb(10, 145, 93);
+      cursor: pointer;
+    }
+    .armInfo {
+      text-align: center;
+      margin-top: 3px;
+      padding: 5px;
+      color: white;
+      border: 2px solid white;
+      height: 15px;
+      width: 80px;
+      background: rgb(10, 145, 93);
+      cursor: pointer;
+    }
+    .legInfo {
+      text-align: center;
+      margin-top: 3px;
+      padding: 5px;
+      color: white;
+      border: 2px solid white;
+      height: 15px;
+      width: 80px;
+      background: rgb(10, 145, 93);
+      cursor: pointer;
+    }
+    #frameContainer {
+      margin-left: 150px;
+
+      height: 100px;
+      width: 85px;
+      background-image: ;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      margin-top: 70px;
+    }
+
+    #headContainer {
+      margin-left: 172px;
+      margin-top: 30px;
+      position: absolute;
+
+      height: 40px;
+      width: 40px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    #legContainer {
+      margin-left: 150px;
+      margin-top: -20px;
+      margin-top: 170px;
+
+      height: 110px;
+      width: 85px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    #armContainer {
+      margin-left: 50px;
+      margin-top: 75px;
+      position: absolute;
+
+      height: 40px;
+      width: 100px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    #armContainer2 {
+      margin-left: 235px;
+      margin-top: 75px;
+      position: absolute;
+
+      height: 40px;
+      width: 100px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+  <body>
+    <div class="cardContainer">
+      <div id="app">
+        <div id="moreInfo"></div>
+        <!--FRAME-->
+        <frame-card
+          v-bind:frame="currentFrame"
+          v-bind:isactive="fcardActive"
+        ></frame-card>
+        <!--BACK-->
+        <div class="frameArrows">
+          <div class="back" v-on:click="backClicked"><</div>
+          <div class="frameInfo" v-on:click="fdisplayInfo">INFO</div>
+          <!--FORWARD-->
+          <div class="arrow" v-on:click="arrowClicked" v-on:click="totaData">
+            >
+          </div>
+        </div>
+
+        <!--HEAD-->
+        <head-card
+          v-bind:head="currentHead"
+          v-bind:isactive="hcardActive"
+        ></head-card>
+        <div class="headArrows">
+          <div class="hback" v-on:click="hbackClicked"><</div>
+          <div class="headInfo" v-on:click="hdisplayInfo">INFO</div>
+          <div class="harrow" v-on:click="harrowClicked">></div>
+        </div>
+
+        <!--ARMS-->
+        <arm-card
+          v-bind:arm="currentArm"
+          v-bind:isactive="acardActive"
+        ></arm-card>
+        <!--BACK-->
+        <div class="armArrows">
+          <div class="aback" v-on:click="abackClicked"><</div>
+          <div class="armInfo" v-on:click="adisplayInfo">INFO</div>
+          <!--FORWARD-->
+          <div class="aarrow" v-on:click="aarrowClicked">></div>
+        </div>
+
+        <!--LEG-->
+        <leg-card
+          v-bind:leg="currentLeg"
+          v-bind:isactive="lcardActive"
+        ></leg-card>
+        <!--BACK-->
+        <div class="legArrows">
+          <div class="lback" v-on:click="lbackClicked"><</div>
+          <div class="legInfo" v-on:click="ldisplayInfo">INFO</div>
+          <!--FORWARD-->
+          <div class="arrow" v-on:click="larrowClicked">></div>
+        </div>
+
+        <div class="mechContainer">
+          <div id="headContainer"></div>
+          <div id="frameContainer"></div>
+          <div id="armContainer"></div>
+          <div id="armContainer2"></div>
+          <div id="legContainer"></div>
+        </div>
+
+        <!--INFO-->
+        <div id="update" v-on:click="totalData" v-on:click="aimage">BUILD</div>
+
+        <div
+          id="scrap"
+          v-on:click="window.location.reload();"
+          v-on:click="aimage"
+        >
+          SCRAP
+        </div>
+
+        <button onClick="window.location.reload();">SCRAP</button>
+
+        <div class="partsContainer">
+          <div id="shieldContainer"></div>
+          <div id="speedContainer"></div>
+          <div id="weightContainer"></div>
+          <div id="aiContainer"></div>
+          <div id="rpmContainer"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
