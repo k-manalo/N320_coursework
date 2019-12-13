@@ -121,9 +121,8 @@ var app = new Vue({
         speed: -8,
         info:
           "Ancient technology that has become a staple for mech squadrons across the galaxy, nobody knows for sure where the Pulse Cannon came from or who invented it. Even the aliens that used it exclusively could not tell you how this arm came to be. All anybody knows is that the Pulse Cannon has an immense reputation for destroying mechs and thats all that really matters.",
-        image: "images/pulse2.png",
-
-        image2: "images/pulse.png"
+        image: "images/pulse.png",
+        image2: "images/pulse2.png"
       },
       {
         name: "AM18 Hammer MG",
