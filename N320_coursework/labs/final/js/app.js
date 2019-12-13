@@ -314,6 +314,7 @@ var app = new Vue({
         this.currentArm.firepower + " rpm";
 
       //SHOW MECH
+
       var showHead = document.createElement("img");
       showHead.src = this.currentHead.image;
       document.getElementById("headContainer").appendChild(showHead);

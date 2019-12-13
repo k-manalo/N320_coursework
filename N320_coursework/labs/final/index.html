@@ -7,9 +7,19 @@
     <title>MECH BUILDER 3K ULTRA</title>
   </head>
   <style>
+    .banner {
+      position: absolute;
+      margin-left: -50px;
+      background-image: url(images/banner.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 1050px;
+      height: 200px;
+    }
     body {
-      width: 1200px;
-      height: 590px;
+      width: 700px;
+      height: 850px;
       display: flex;
       background-image: url(images/smoke.jpg);
       background-position: center;
@@ -17,6 +27,7 @@
       background-size: cover;
     }
     .cardContainer {
+      margin-top: 250px;
       position: absolute;
       margin-left: -85px;
     }
@@ -265,7 +276,7 @@
       font-size: 25px;
       text-align: center;
       color: black;
-      cursor: pointer;
+
       width: 100px;
       height: 40px;
       background-color: black;
@@ -278,7 +289,7 @@
       font-size: 25px;
       text-align: center;
       color: black;
-      cursor: pointer;
+
       width: 100px;
       height: 40px;
       background-color: black;
@@ -291,7 +302,7 @@
       font-size: 25px;
       text-align: center;
       color: black;
-      cursor: pointer;
+
       width: 100px;
       height: 40px;
       background-color: black;
@@ -304,7 +315,7 @@
       font-size: 25px;
       text-align: center;
       color: black;
-      cursor: pointer;
+
       width: 100px;
       height: 40px;
       background-color: black;
@@ -317,7 +328,7 @@
       font-size: 20px;
       text-align: center;
       color: black;
-      cursor: pointer;
+
       width: 100px;
       height: 40px;
       background-color: black;
@@ -349,11 +360,7 @@
       height: 550px;
       width: 350px;
     }
-    #infoPic {
-      width: 100px;
-      height: 100px;
-      background-color: red;
-    }
+
     /*ARROW ANIMATIONS*/
     /*active*/
     .fcardActive {
@@ -496,7 +503,9 @@
       background-size: cover;
     }
   </style>
+
   <body>
+    <div class="banner"></div>
     <div class="cardContainer">
       <div id="app">
         <div id="moreInfo"></div>
@@ -570,9 +579,6 @@
         >
           SCRAP
         </div>
-
-        <button onClick="window.location.reload();">SCRAP</button>
-
         <div class="partsContainer">
           <div id="shieldContainer"></div>
           <div id="speedContainer"></div>
